@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Çaqmoq · Vintage kiyimlar</title>
+  <meta name="description" content="Ikkinchi qoʻl va vintage kiyimlar. Har biri bitta dona.">
+  <meta name="theme-color" content="#181714">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Oswald:wght@500;700&display=swap">
+  <link rel="stylesheet" href="tokens.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M14 14h7v7h-7z"/><path d="M3 14h7v7H3z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Asosiy qismga oʻtish</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__banner" id="banner">
+      <p class="nav__banner-text">Yangi partiya har juma, 20:00</p>
+      <button class="nav__banner-link" type="button" data-action="telegram">Xabar olish</button>
+      <button class="icon-btn icon-btn--on-ink" type="button" id="banner-x" aria-label="Eʼlonni yopish"><svg class="i"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="nav__bar">
+      <a class="nav__brand" href="#/" aria-label="Çaqmoq, bosh sahifa">
+        <img src="assets/logo.png" alt="Çaqmoq" width="826" height="374">
+      </a>
+      <nav class="nav__links" aria-label="Asosiy boʻlimlar">
+        <a href="#/katalog">Hammasi</a>
+        <a href="#/katalog?tur=Palto" data-type="Palto">Palto</a>
+        <a href="#/katalog?tur=Kurtka" data-type="Kurtka">Kurtka</a>
+        <a href="#/katalog?tur=Pidjak" data-type="Pidjak">Pidjak</a>
+        <a href="#/katalog?tur=Nimcha" data-type="Nimcha">Nimcha</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" type="button" id="search-toggle" aria-label="Qidirish" aria-expanded="false"><svg class="i"><use href="#i-search"/></svg></button>
+        <a class="icon-btn nav__only-lg" href="#/saralangan" aria-label="Saralanganlar"><svg class="i"><use href="#i-heart"/></svg><span class="badge" data-saved-count hidden></span></a>
+        <button class="icon-btn nav__only-lg" type="button" data-action="cart" aria-label="Savat"><svg class="i"><use href="#i-bag"/></svg><span class="badge" data-cart-count hidden></span></button>
+      </div>
+      <form class="search" id="search" role="search" autocomplete="off">
+        <label class="sr-only" for="search-input">Buyum qidirish</label>
+        <input class="search__input" id="search-input" type="search" placeholder="Palto, charm, 90-lar" role="combobox" aria-expanded="false" aria-controls="search-list" aria-autocomplete="list">
+        <ul class="search__list" id="search-list" role="listbox" aria-label="Qidiruv natijalari" hidden></ul>
+      </form>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="foot">
+    <div class="foot__stitch">
+      <div class="drop">
+        <p class="drop__label"><svg class="i" aria-hidden="true"><use href="#i-bolt"/></svg>Keyingi partiya · juma, 20:00</p>
+        <div class="drop__time" aria-hidden="true">
+          <span class="drop__unit"><b data-drop="d">00</b><small>kun</small></span>
+          <span class="drop__unit"><b data-drop="h">00</b><small>soat</small></span>
+          <span class="drop__unit"><b data-drop="m">00</b><small>daqiqa</small></span>
+          <span class="drop__unit"><b data-drop="s">00</b><small>soniya</small></span>
+        </div>
+      </div>
+      <div class="foot__cta">
+        <p class="foot__line">Birinchi boʻlib koʻring.</p>
+        <button class="btn btn--on-ink" type="button" data-action="telegram"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Telegramga ulanish</button>
+      </div>
+    </div>
+    <div class="foot__meta">
+      <img class="foot__logo" src="assets/logo.png" alt="Çaqmoq" width="826" height="374" loading="lazy">
+      <nav class="foot__links" aria-label="Pastki havolalar">
+        <a href="#/katalog">Katalog</a>
+        <a href="#/yordam">Yordam</a>
+        <a href="#/saralangan">Saralangan</a>
+      </nav>
+      <p class="foot__note">Demo sayt. Mahsulot maʼlumotlari va narxlar namuna.</p>
+      <button class="foot__reset" type="button" data-action="reset">Demoni tiklash</button>
+    </div>
+  </footer>
+
+  <nav class="tabbar" aria-label="Telefon menyusi">
+    <a class="tabbar__item" href="#/" data-tab="home"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg>Bosh</a>
+    <a class="tabbar__item" href="#/katalog" data-tab="catalog"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg>Katalog</a>
+    <a class="tabbar__item" href="#/saralangan" data-tab="saved"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg>Saralangan<span class="badge" data-saved-count hidden></span></a>
+    <button class="tabbar__item" type="button" data-action="cart"><svg class="i" aria-hidden="true"><use href="#i-bag"/></svg>Savat<span class="badge" data-cart-count hidden></span></button>
+  </nav>
+
+  <dialog class="drawer" id="cart" aria-labelledby="cart-title"></dialog>
+  <dialog class="lightbox" id="lightbox" aria-label="Surat kattalashtirilgan"></dialog>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+  <noscript><p class="noscript">Bu demo uchun JavaScript yoqilgan boʻlishi kerak.</p></noscript>
+
+  <script src="js/data.js?v=7"></script>
+  <script src="js/store.js?v=7"></script>
+  <script src="js/search.js?v=7"></script>
+  <script src="js/ui.js?v=7"></script>
+  <script src="js/pages.js?v=7"></script>
+  <script src="js/checkout.js?v=7"></script>
+  <script src="js/app.js?v=7"></script>
+</body>
+</html>

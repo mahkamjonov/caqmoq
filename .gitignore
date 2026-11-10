@@ -1,0 +1,6 @@
+.claude/
+.hallmark/
+.vercel/
+node_modules/
+.DS_Store
+Thumbs.db

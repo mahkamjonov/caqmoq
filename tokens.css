@@ -1,0 +1,79 @@
+/* Çaqmoq dizayn tokenlari. Brend ranglari logotip faylidan olingan. */
+:root {
+  --color-paper: oklch(96.4% 0.014 87);
+  --color-paper-2: oklch(92.6% 0.020 87);
+  --color-paper-3: oklch(88.4% 0.026 87);
+  --color-ink: oklch(20.5% 0.006 91.6);
+  --color-ink-2: oklch(43.1% 0.020 90);
+  --color-rule: oklch(82% 0.022 87);
+  --color-accent: oklch(86.4% 0.178 99.5);
+  --color-accent-ink: var(--color-ink);
+  --color-blue-deep: oklch(50.2% 0.133 248.1);
+  --color-red: oklch(54.1% 0.200 27.8);
+  --color-red-deep: oklch(47.4% 0.174 27.9);
+  --color-focus: var(--color-blue-deep);
+  --color-scrim: oklch(20.5% 0.006 91.6 / 0.5);
+  --color-shadow: oklch(8% 0.004 90 / 0.55);
+
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-body: "Golos Text", "Segoe UI", sans-serif;
+
+  --text-2xs: 0.6875rem;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: clamp(1.75rem, 1.2rem + 1.6vw, 2.25rem);
+  --text-2xl: clamp(2.25rem, 1.4rem + 3.2vw, 3.75rem);
+  --text-display: clamp(2.125rem, 11.8vw, 5.5rem);
+  --text-page: clamp(2.125rem, 10.2vw, 5.5rem);
+  --text-hero: clamp(2rem, 9.4vw, 3rem);
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+  --page-gutter: clamp(1.25rem, 3.4vw, 2.75rem);
+
+  --rule-hair: 1px;
+  --rule-heavy: 1.5px;
+  --radius-pill: 999px;
+
+  --control-h: 2.75rem;
+  --cta-h: 3.5rem;
+  --banner-h: 2.25rem;
+  --bar-h: 3.75rem;
+  --tab-h: 3.75rem;
+  --nav-offset: calc(var(--banner-h) + var(--bar-h));
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --dur-slow: 700ms;
+
+  --z-sticky: 200;
+  --z-nav: 300;
+  --z-tab: 310;
+  --z-toast: 500;
+}
+
+@media (min-width: 60rem) {
+  :root {
+    --bar-h: 4.5rem;
+    --tab-h: 0px;
+    --text-display: clamp(3rem, 6.8vw, 7rem);
+    --text-page: var(--text-display);
+    --text-hero: clamp(2.75rem, 4.6vw, 5.25rem);
+  }
+}
+
+.nav-compact { --nav-offset: var(--bar-h); }
